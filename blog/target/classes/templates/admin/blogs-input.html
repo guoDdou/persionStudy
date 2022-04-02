@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="admin/_fragments :: head(~{::title})">
-  <title>博客发布</title>
+  <title>动态发布</title>
 </head>
 
 <body>
@@ -84,13 +84,13 @@
 
         <div class="required field">
           <div id="md-content" style="z-index: 1 !important;">
-           <textarea name="content" th:text="*{content}" placeholder="博客内容..." maxlength="300"></textarea>
+           <textarea name="content" th:text="*{content}" placeholder="学习内容..." maxlength="300"></textarea>
           </div>
         </div>
 
         <div class="required field">
           <div id="md-description" style="z-index: 1 !important;">
-            <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="300"></textarea>
+            <textarea name="description" th:text="*{description}" placeholder="学习动态描述..." maxlength="300"></textarea>
           </div>
         </div>
 
