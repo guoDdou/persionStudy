@@ -4,11 +4,11 @@ body {
     background-size: cover;
 }
 .index-bg{
-    background: url("/images/bg4.jpg");
+    background: url("/images/index.jpg");
     background-size: cover;
 }
 .type-bg{
-    background: url("/images/index.jpg");
+    background: url("/images/bg4.jpg");
     background-size: cover;
 }
 .tag-bg{
