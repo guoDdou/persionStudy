@@ -31,10 +31,15 @@
             <p class="m-text">希望我分享的学习的动态能让你们也有新的感悟。</p>
           </div>
           <div class="ui attached segment">
-            <div class="ui orange basic left pointing label">编程</div>
-            <div class="ui orange basic left pointing label">跑步</div>
-            <div class="ui orange basic left pointing label">看电影</div>
-            <div class="ui orange basic left pointing label">听音乐</div>
+<!--            <div class="ui orange basic left pointing label">编程</div>-->
+<!--            <div class="ui orange basic left pointing label">跑步</div>-->
+<!--            <div class="ui orange basic left pointing label">看电影</div>-->
+<!--            <div class="ui orange basic left pointing label">听音乐</div>-->
+            <a href="https://www.csdn.net/" class="ui orange basic left pointing label">编程</a>
+            <a href="" class="ui orange basic left pointing label">跑步</a>
+            <a href="" class="ui orange basic left pointing label">看电影</a>
+            <a href="https://movie.douban.com/chart" class="ui orange basic left pointing label">听音乐</a>
+
           </div>
           <div class="ui attached segment">
             <div class="ui teal basic left pointing label m-margin-tb-tiny">ssm</div>
@@ -43,33 +48,28 @@
             <div class="ui teal basic left pointing label m-margin-tb-tiny">redis</div>
             <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
           </div>
-          <div class="ui bottom attached segment">
-            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
-            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-            <a href="#" class="ui qq circular icon button" data-content="1842645681" data-position="bottom center"><i class="qq icon"></i></a>
-          </div>
+<!--          <div class="ui bottom attached segment">-->
+<!--            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>-->
+<!--            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>-->
+<!--            <a href="#" class="ui qq circular icon button" data-content="1842645681" data-position="bottom center"><i class="qq icon"></i></a>-->
+<!--          </div>-->
 
           <div class="ui wechat-qr flowing popup transition hidden">
             <img src="../static/images/wechat1.jpg" th:src="@{/images/wechat1.jpg}" alt="" class="ui rounded image" style="width: 110px">
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
   <br>
   <br>
 
-  <!--底部footer-->
-  <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
-
-  </footer>
-
+  <!--底部footer，先注释掉看看后续是否有影响-->
+<!--  <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">-->
+<!--  </footer>-->
   <!--导入的script-->
-  <th:block th:replace="_fragments :: script">
-
-  </th:block>
+<!--  <th:block th:replace="_fragments :: script">-->
+<!--  </th:block>-->
 
   <script>
     $('.menu.toggle').click(function () {

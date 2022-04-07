@@ -3,6 +3,8 @@ package com.blog.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
+/*关于我页面*/
 @Controller
 public class AboutShowController {
 
