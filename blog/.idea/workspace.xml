@@ -12,12 +12,23 @@
   <component name="ChangeListManager">
     <list default="true" id="08ebf5d0-8ae2-4bb1-9acc-7568cc9c269a" name="Default Changelist" comment="update md5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/TypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/dao/BlogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/dao/TagDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/dao/TagDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/pojo/BlogAndTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/pojo/BlogAndTag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/TagService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/impl/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TagDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TagDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,8 +178,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BlogApplicationTests.contextLoads" />
         <item itemvalue="Application.MD5Utils" />
+        <item itemvalue="JUnit.BlogApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +233,8 @@
       <workItem from="1648203180533" duration="1346000" />
       <workItem from="1648375653928" duration="107000" />
       <workItem from="1649228132787" duration="9904000" />
-      <workItem from="1649489691304" duration="4111000" />
+      <workItem from="1649489691304" duration="12561000" />
+      <workItem from="1649508596906" duration="5204000" />
     </task>
     <task id="LOCAL-00001" summary="update md5">
       <created>1584841437407</created>
@@ -252,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649314377430</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完善后台搜索的功能">
+      <created>1649494006287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649494006287</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,69 +294,74 @@
     <MESSAGE value="修改背景图片" />
     <MESSAGE value="修改头像" />
     <MESSAGE value="去掉html中多余的代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="去掉html中多余的代码" />
+    <MESSAGE value="完善后台搜索的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善后台搜索的功能" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1649513127925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1649513127925" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649233245673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649233245673" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1647679396518">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1649509309188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1647679396518" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1649509309188" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1649311385954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1649311385954" />
-    <state width="1493" height="97" key="GridCell.Tab.0.bottom" timestamp="1649493641400">
+    <state width="1493" height="359" key="GridCell.Tab.0.bottom" timestamp="1649513538243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649493641400" />
-    <state width="1493" height="97" key="GridCell.Tab.0.center" timestamp="1649493641400">
+    <state width="1493" height="359" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649513538243" />
+    <state width="1493" height="359" key="GridCell.Tab.0.center" timestamp="1649513538243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1649493641400" />
-    <state width="1493" height="97" key="GridCell.Tab.0.left" timestamp="1649493641400">
+    <state width="1493" height="359" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1649513538243" />
+    <state width="1493" height="359" key="GridCell.Tab.0.left" timestamp="1649513538243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1649493641400" />
-    <state width="1493" height="97" key="GridCell.Tab.0.right" timestamp="1649493641400">
+    <state width="1493" height="359" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1649513538243" />
+    <state width="1493" height="359" key="GridCell.Tab.0.right" timestamp="1649513538243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1649493641400" />
-    <state width="1493" height="97" key="GridCell.Tab.1.bottom" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1649513538243" />
+    <state width="1493" height="359" key="GridCell.Tab.1.bottom" timestamp="1649513602907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.1.center" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649513602907" />
+    <state width="1493" height="359" key="GridCell.Tab.1.center" timestamp="1649513602907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.1.left" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649513602907" />
+    <state width="1493" height="359" key="GridCell.Tab.1.left" timestamp="1649513602907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.1.right" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649513602907" />
+    <state width="1493" height="359" key="GridCell.Tab.1.right" timestamp="1649513602907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.2.bottom" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649513602907" />
+    <state width="1493" height="359" key="GridCell.Tab.2.bottom" timestamp="1649513538135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.2.center" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649513538135" />
+    <state width="1493" height="359" key="GridCell.Tab.2.center" timestamp="1649513538135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.2.left" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1649513538135" />
+    <state width="1493" height="359" key="GridCell.Tab.2.left" timestamp="1649513538135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
-    <state width="1493" height="97" key="GridCell.Tab.2.right" timestamp="1649493641272">
+    <state width="1493" height="359" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1649513538135" />
+    <state width="1493" height="359" key="GridCell.Tab.2.right" timestamp="1649513538135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1649493641272" />
+    <state width="1493" height="359" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1649513538135" />
     <state x="408" y="116" key="NewModule_or_Project.wizard" timestamp="1648005762366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -354,10 +378,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1648863726385" />
-    <state x="241" y="141" width="1053" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1649493220859">
+    <state x="241" y="141" width="1053" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1649512085907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="241" y="141" width="1053" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1649493220859" />
+    <state x="241" y="141" width="1053" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1649512085907" />
     <state x="420" y="116" width="600" height="532" key="find.popup" timestamp="1649490578153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -366,22 +390,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1649314496542" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1648015247325">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1649496560326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1648015247325" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1649496560326" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/BlogController.java</url>
-          <line>49</line>
-          <properties class="com.blog.controller.admin.BlogController" method="searchBlogs">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java</url>
           <line>83</line>
@@ -390,7 +406,44 @@
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java</url>
+          <line>89</line>
+          <properties class="com.blog.service.impl.BlogServiceImpl" method="getBlogByTypeId">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/blog/service/impl/BlogServiceImpl.java</url>
+          <line>95</line>
+          <properties class="com.blog.service.impl.BlogServiceImpl" method="saveBlog">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/BlogController.java</url>
+          <line>77</line>
+          <properties class="com.blog.controller.admin.BlogController" method="addBlog">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/TypeController.java</url>
+          <line>75</line>
+          <properties class="com.blog.controller.admin.TypeController" method="delete">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="com.blog.pojo.Blog" fieldName="type" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

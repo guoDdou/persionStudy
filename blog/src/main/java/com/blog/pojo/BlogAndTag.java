@@ -10,12 +10,16 @@ import lombok.NoArgsConstructor;
 
 
 public class BlogAndTag {
+    private Long id;
 
     private Long tagId;
 
     private Long blogId;
 
-    public BlogAndTag(Long id, Long id1) {
+    public BlogAndTag(Long tagId, Long blogId) {
+        this.tagId = tagId;
+        this.blogId = blogId;
+
     }
 
     public Long getTagId() {
@@ -34,6 +38,14 @@ public class BlogAndTag {
         this.blogId = blogId;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "BlogAndTag{" +
@@ -41,4 +53,6 @@ public class BlogAndTag {
                 ", blogId=" + blogId +
                 '}';
     }
+
+
 }

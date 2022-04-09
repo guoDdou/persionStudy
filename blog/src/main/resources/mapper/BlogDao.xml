@@ -117,9 +117,9 @@
             <if test="typeId != null">
                 and b.type_id = #{typeId}
             </if>
-            <if test="recommend != null">
-                and b.recommend = #{recommend}
-            </if>
+<!--            <if test="recommend != null">-->
+<!--                and b.recommend = #{recommend}-->
+<!--            </if>-->
             <if test="title != null">
                 and b.title like #{pattern}
             </if>
@@ -162,11 +162,14 @@
         where DATE_FORMAT(b.update_time, "%Y") = #{year}
     </select>
 
+<select id="getBlogByTypeId" resultMap="blog">
+    select b.* from t_blog b where b.type_id = #{typeId}
+</select>
+
+    <select id="updateBlogAndTag" resultType="BlogAndTag">
+        update t_blog_tags set
 
 
-
-
-
-
+    </select>
 
 </mapper>

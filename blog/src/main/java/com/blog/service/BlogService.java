@@ -35,4 +35,5 @@ public interface BlogService {
 
     List<Map> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
 
+    List<Blog> getBlogByTypeId(Long id);
 }

@@ -43,4 +43,9 @@ public interface BlogDao {
 
     int deleteBlog(Long id);
 
+    List<Blog> getBlogByTypeId(Long typeId);
+
+    int updateBlogAndTag(BlogAndTag blogAndTag);
+
+    List<BlogAndTag> getBlogAndTagById(Long id);
 }

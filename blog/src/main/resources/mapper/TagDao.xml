@@ -44,5 +44,11 @@
     <update id="updateTag" parameterType="Tag">
         update blog.t_tag set name = #{name} where id = #{id};
     </update>
+    <select id="getTagAndBlog" resultType="java.util.Map">
+        select * from t_blog_tags where tag_id = #{id};
+
+
+    </select>
+
 
 </mapper>

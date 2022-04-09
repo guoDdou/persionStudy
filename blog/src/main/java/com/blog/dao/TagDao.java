@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -23,4 +24,6 @@ public interface TagDao {
     int updateTag(Tag tag);
 
     int deleteTag(Long id);
+
+    List<Map> getTagAndBlog(Long id);
 }

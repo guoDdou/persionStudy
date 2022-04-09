@@ -23,14 +23,14 @@ public class CommentController {
     @Autowired
     private BlogService blogService;
 
-    @Value("${comment.avatar}")
+//    @Value("${comment.avatar}")
     private String avatar;
 
     @GetMapping("/comments/{blogId}")  //展示留言
     public String comments(@PathVariable Long blogId, Model model){
         model.addAttribute("comments", commentService.getCommentByBlogId(blogId));
         model.addAttribute("blog", blogService.getDetailedBlog(blogId));
-        return "blog :: commentList";
+        return "blog";
     }
 
     @PostMapping("/comments")   //提交留言

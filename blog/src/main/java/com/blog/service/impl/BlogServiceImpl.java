@@ -86,12 +86,20 @@ public class BlogServiceImpl implements BlogService {
         return blogDao.searchAllBlog(blog);
     }
 
+    @Override
+    public List<Blog> getBlogByTypeId(Long typeId) {
+        return blogDao.getBlogByTypeId(typeId);
+    }
+
 
     @Override    //新增博客
     public int saveBlog(Blog blog) {
         blog.setCreateTime(new Date());
         blog.setUpdateTime(new Date());
         blog.setViews(0);
+        if (("".equals(blog.getFlag()))){
+            blog.setFlag("原创");
+        }
         //保存博客
         blogDao.saveBlog(blog);
         //保存博客后才能获取自增的id

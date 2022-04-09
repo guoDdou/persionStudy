@@ -3,6 +3,7 @@ package com.blog.service;
 import com.blog.pojo.Tag;
 
 import java.util.List;
+import java.util.Map;
 
 public interface TagService {
 
@@ -21,4 +22,6 @@ public interface TagService {
     int updateTag(Tag tag);
 
     int deleteTag(Long id);
+
+    List<Map> getTagAndBlog(Long id);
 }

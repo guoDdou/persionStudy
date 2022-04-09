@@ -1,11 +1,14 @@
 package com.blog.controller.admin;
 
+import com.blog.pojo.Blog;
 import com.blog.pojo.Tag;
 import com.blog.pojo.Type;
+import com.blog.service.BlogService;
 import com.blog.service.TagService;
 import com.blog.service.TypeService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import javafx.util.converter.PercentageStringConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
@@ -20,6 +24,11 @@ public class TagController {
 
     @Autowired
     TagService tagService;
+
+    @Autowired
+    BlogService blogService;
+
+
 
     @GetMapping("/tags")
     public String tags(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
@@ -71,8 +80,14 @@ public class TagController {
 
     @GetMapping("/tags/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes){
-        tagService.deleteTag(id);
-        attributes.addFlashAttribute("msg", "删除成功");
+        List<Map> tags =  tagService.getTagAndBlog(id);
+        if (tags == null){
+            tagService.deleteTag(id);
+            attributes.addFlashAttribute("msg", "删除成功");
+            return "redirect:/admin/tags";
+        }else {
+            attributes.addFlashAttribute("msg", "有其它内容引用了此分类,您无法将其删除！");
+        }
         return "redirect:/admin/tags";
     }
 }

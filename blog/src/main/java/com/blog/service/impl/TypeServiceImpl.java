@@ -57,6 +57,7 @@ public class TypeServiceImpl implements TypeService {
     @Transactional
     @Override
     public int deleteType(Long id) {
+
         return typeDao.deleteType(id);
     }
 }

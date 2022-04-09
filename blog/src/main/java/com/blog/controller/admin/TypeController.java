@@ -1,6 +1,8 @@
 package com.blog.controller.admin;
 
+import com.blog.pojo.Blog;
 import com.blog.pojo.Type;
+import com.blog.service.BlogService;
 import com.blog.service.TypeService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -18,6 +20,9 @@ public class TypeController {
 
     @Autowired
     TypeService typeService;
+    @Autowired
+    BlogService blogService;
+
 
     @GetMapping("/types")
     public String types(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
@@ -69,8 +74,16 @@ public class TypeController {
 
     @GetMapping("/types/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes){
-        typeService.deleteType(id);
-        attributes.addFlashAttribute("msg", "删除成功");
-        return "redirect:/admin/types";
+        //删除之前看一下是否有其他的文章引用此标签，若有的话则提示，有其它内容引用了此分类，确定删除吗？点击确定，删除此分类和所引用的内容
+        List<Blog> blog = blogService.getBlogByTypeId(id);
+        if (blog == null || blog.size()==0){
+            typeService.deleteType(id);
+            attributes.addFlashAttribute("msg", "删除成功");
+            return "redirect:/admin/types";
+        }else {
+            attributes.addFlashAttribute("msg", "有其它内容引用了此分类,您无法将其删除！");
+            return "redirect:/admin/types";
+
+        }
     }
 }

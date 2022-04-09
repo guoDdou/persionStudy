@@ -508,8 +508,8 @@ h5,h6{font-size:1em;}
             </div>
 
             <!--提交留言表单-->
-           
-            <div id="comment-form" class="ui form">
+
+            <form th:action="@{/comments}" method="post" class="ui segment form">
                 <input type="hidden" name="blog.id" th:value="${blog.id}">
                 <input type="hidden" name="parentComment.id" value="-1">
                 <div class="field">
@@ -529,10 +529,10 @@ h5,h6{font-size:1em;}
                         </div>
                     </div>
                     <div class="field  m-margin-bottom-small m-mobile-wide">
-                        <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                        <button id="commentpost-btn"  class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
                     </div>
                 </div>
-            </div>
+            </form>
             
         </div>
     </div>
