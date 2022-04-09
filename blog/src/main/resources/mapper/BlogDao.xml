@@ -52,9 +52,9 @@
         where b.type_id = t.id and  u.id = b.user_id order by b.update_time desc
     </select>
 
-    <select id="getAllBlog" resultMap="blog">  /*后台博客展示*/
-        select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published,
-               t.id typeid, t.name typename
+    <select id="getAllBlog" resultType="java.util.Map">  /*后台博客展示*/
+        select b.id bId , b.title title, b.update_time updateTime, b.recommend recommend, b.published published, b.type_id typeId, t.id tId
+        , t.name name
         from t_blog b, t_type t
         where b.type_id = t.id    /*博客类型id=类型id*/
     </select>
@@ -107,23 +107,23 @@
         order by b.update_time desc
     </select>
 
-    <select id="searchAllBlog" parameterType="Blog" resultMap="blog">
-        <bind name="pattern" value="'%' + title + '%'" />    /*模糊查询*/
-        select b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name
-        from t_blog b ,t_type t
+    <select id="searchAllBlog" parameterType="Blog" resultType="java.util.Map">
+        <bind name="pattern" value="'%' + title + '%'" />
+        select b.id bId , b.title title, b.update_time updateTime, b.recommend recommend, b.published published, b.type_id typeId, t.id tId
+        , t.name name
+        from t_blog b inner join  t_type t on                b.type_id = t.id
         <where>
-            <if test="1 == 1">
-                b.type_id = t.id    /*博客类型id=类型id*/
-            </if>
+
             <if test="typeId != null">
-                and b.type_id = #{typeId}       /*根据博客类型查询*/
+                and b.type_id = #{typeId}
             </if>
             <if test="recommend != null">
-                and b.recommend = #{recommend}   /*根据博客推荐查询*/
+                and b.recommend = #{recommend}
             </if>
             <if test="title != null">
-                and b.title like #{pattern}   /*根据博客title模糊查询*/
+                and b.title like #{pattern}
             </if>
+
         </where>
     </select>
 

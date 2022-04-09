@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -16,7 +17,7 @@ public interface BlogDao {
 
     Blog getDetailedBlog(@Param("id") Long id);  //博客详情
 
-    List<Blog> getAllBlog();
+    List<Map> getAllBlog();
 
     List<Blog> getByTypeId(Long typeId);  //根据类型id获取博客
 
@@ -28,7 +29,7 @@ public interface BlogDao {
 
     List<Blog> getSearchBlog(String query);  //全局搜索博客
 
-    List<Blog> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
+    List<Map> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
 
     List<String> findGroupYear();  //查询所有年份，返回一个集合
 

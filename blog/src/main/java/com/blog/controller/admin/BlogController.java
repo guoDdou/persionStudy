@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
@@ -37,7 +38,7 @@ public class BlogController {
     @GetMapping("/blogs")  //后台显示博客列表
     public String blogs(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
         PageHelper.startPage(pagenum, 5);
-        List<Blog> allBlog = blogService.getAllBlog();
+        List<Map> allBlog = blogService.getAllBlog();
         //得到分页结果对象
         PageInfo pageInfo = new PageInfo(allBlog);
         model.addAttribute("pageInfo", pageInfo);
@@ -48,7 +49,7 @@ public class BlogController {
     @PostMapping("/blogs/search")  //按条件查询博客
     public String searchBlogs(Blog blog, @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
         PageHelper.startPage(pagenum, 5);
-        List<Blog> allBlog = blogService.searchAllBlog(blog);
+        List<Map> allBlog = blogService.searchAllBlog(blog);
         //得到分页结果对象
         PageInfo pageInfo = new PageInfo(allBlog);
         model.addAttribute("pageInfo", pageInfo);

@@ -35,7 +35,7 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public List<Blog> getAllBlog() {
+    public List<Map> getAllBlog() {
         return blogDao.getAllBlog();
     }
 
@@ -81,7 +81,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public List<Blog> searchAllBlog(Blog blog) {
+    public List<Map> searchAllBlog(Blog blog) {
+
         return blogDao.searchAllBlog(blog);
     }
 

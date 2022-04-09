@@ -11,7 +11,7 @@ public interface BlogService {
 
     Blog getDetailedBlog(Long id);  //前端展示博客
 
-    List<Blog> getAllBlog();
+    List<Map> getAllBlog();
 
     List<Blog> getByTypeId(Long typeId);  //根据类型id获取博客
 
@@ -33,6 +33,6 @@ public interface BlogService {
 
     int deleteBlog(Long id);
 
-    List<Blog> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
+    List<Map> searchAllBlog(Blog blog);  //后台根据标题、分类、推荐搜索博客
 
 }
