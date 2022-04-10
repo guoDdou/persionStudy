@@ -30,7 +30,7 @@
         <div class="required field">
           <div class="ui left labeled input">
             <div class="ui selection compact teal basic dropdown label">
-              <input type="hidden" value="原创" name="flag" th:value="*{flag}" >
+              <input type="hidden" value="转载" name="flag" th:value="*{flag}" >
               <i class="dropdown icon"></i>
               <div class="text">转载</div>
               <div class="menu">
@@ -78,32 +78,19 @@
           </div>
         </div>
 
-        <div class="required field">  <!--required表示必须要填-->
+        <div class="required field"  id ="test">  <!--required表示必须要填-->
+          <div class="ui left labeled input" >
+            <label class="ui teal basic label" >转载地址</label>
+            <input type="text" name="firstPicture" th:value="*{reprintAddress}" placeholder="请输入转载的地址">
+          </div>
+        </div>
+
+        <div class="required field" >  <!--required表示必须要填-->
           <div class="ui left labeled input">
             <label class="ui teal basic label">首图</label>
             <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="首图引用地址">
           </div>
         </div>
-
-        <div class="required field" id="test" >  <!--required表示必须要填-->
-          <div class="ui left labeled input" >
-            <label class="ui teal basic label" >转载地址</label>
-            <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="请输入转载的地址">
-          </div>
-        </div>
-
-
-<!--        <button id="show">显示</button>-->
-<!--        <button id="hide">隐藏</button>-->
-<!--        <div id="test">测试文字</div>-->
-        <script>
-          show.onclick = function(){
-            test.style.display = 'block';
-          }
-          hide.onclick = function(){
-            test.style.display = 'none';
-          }
-        </script>
 
         <div class="required field">
           <div id="md-content" style="z-index: 1 !important;">
@@ -231,6 +218,13 @@
             prompt: '标题：请输入博客分类'
           }]
         },
+        reprintAddress : {
+          identifier: 'reprintAddress',
+          rules: [{
+            type : 'empty',
+            prompt: '标题：请输入转载地址'
+          }]
+        },
         firstPicture : {
           identifier: 'firstPicture',
           rules: [{
@@ -247,6 +241,14 @@
         }
       }
     });
+
+// 文本框的显示与隐藏
+    show.onclick = function(){
+      test.style.display = 'block';
+    }
+    hide.onclick = function(){
+      test.style.display = 'none';
+    }
 
   </script>
 </body>

@@ -98,7 +98,7 @@ public class BlogServiceImpl implements BlogService {
         blog.setUpdateTime(new Date());
         blog.setViews(0);
         if (("".equals(blog.getFlag()))){
-            blog.setFlag("原创");
+            blog.setFlag("转载");
         }
         //保存博客
         blogDao.saveBlog(blog);

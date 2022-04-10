@@ -26,6 +26,10 @@ public class Blog {
     private boolean recommend;
     private Date createTime;
     private Date updateTime;
+    private String reprintAddress;//转载的地址
+
+
+
 
     //这个属性用来在mybatis中进行连接查询的
     private Long typeId;
@@ -232,5 +236,13 @@ public class Blog {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getReprintAddress() {
+        return reprintAddress;
+    }
+
+    public void setReprintAddress(String reprintAddress) {
+        this.reprintAddress = reprintAddress;
     }
 }
