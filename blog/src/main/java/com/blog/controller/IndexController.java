@@ -31,7 +31,7 @@ public class IndexController {
     private TagService tagService;
 
     @GetMapping("/")
-    public String toIndex(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
+    public String toIndex(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pagenum, Model model){
 
         PageHelper.startPage(pagenum, 8);
         List<Blog> allBlog = blogService.getIndexBlog();
