@@ -23,7 +23,7 @@ public class CommentController {
     @Autowired
     private BlogService blogService;
 
-//    @Value("${comment.avatar}")
+    @Value("${comment.avatar}")
     private String avatar;
 
     @GetMapping("/comments/{blogId}")  //展示留言

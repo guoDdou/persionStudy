@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08ebf5d0-8ae2-4bb1-9acc-7568cc9c269a" name="Default Changelist" comment="update md5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +219,8 @@
       <workItem from="1649228132787" duration="9904000" />
       <workItem from="1649489691304" duration="12561000" />
       <workItem from="1649508596906" duration="10306000" />
-      <workItem from="1649548431510" duration="5320000" />
+      <workItem from="1649548431510" duration="7638000" />
+      <workItem from="1649642852987" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="update md5">
       <created>1584841437407</created>
@@ -277,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649551432532</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修复不能翻页的bug">
+      <created>1649553906633</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1649553906633</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +312,8 @@
     <MESSAGE value="完善发布博客时t_blog_tags 表中没有 tag_id 和blog_id 的值 以及原创值的增加" />
     <MESSAGE value="增加联动的显示与隐藏" />
     <MESSAGE value="添加转载字段" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加转载字段" />
+    <MESSAGE value="修复不能翻页的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复不能翻页的bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1649517886920">
@@ -323,38 +332,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1649311385954" />
-    <state width="1493" height="161" key="GridCell.Tab.0.bottom" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.0.bottom" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.0.center" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.0.center" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.0.left" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.0.left" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.0.right" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.0.right" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.1.bottom" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.1.bottom" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.1.center" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.1.center" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.1.left" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.1.left" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
-    <state width="1493" height="161" key="GridCell.Tab.1.right" timestamp="1649553194907">
+    <state width="1493" height="18" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
+    <state width="1493" height="18" key="GridCell.Tab.1.right" timestamp="1649555415347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="161" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649553194907" />
+    <state width="1493" height="18" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1649555415347" />
     <state width="1493" height="133" key="GridCell.Tab.2.bottom" timestamp="1649552496727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
