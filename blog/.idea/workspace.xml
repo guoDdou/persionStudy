@@ -11,8 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08ebf5d0-8ae2-4bb1-9acc-7568cc9c269a" name="Default Changelist" comment="update md5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/study-dev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/study-dev.log.2022-03-16.0.gz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +222,7 @@
       <workItem from="1649508596906" duration="10306000" />
       <workItem from="1649548431510" duration="7638000" />
       <workItem from="1649642852987" duration="842000" />
+      <workItem from="1649817863217" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="update md5">
       <created>1584841437407</created>
@@ -285,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649553906633</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="头像打开">
+      <created>1649817939311</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649817939311</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +322,8 @@
     <MESSAGE value="增加联动的显示与隐藏" />
     <MESSAGE value="添加转载字段" />
     <MESSAGE value="修复不能翻页的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复不能翻页的bug" />
+    <MESSAGE value="头像打开" />
+    <option name="LAST_COMMIT_MESSAGE" value="头像打开" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1649517886920">
