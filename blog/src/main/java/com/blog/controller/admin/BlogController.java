@@ -58,7 +58,7 @@ public class BlogController {
         return "admin/blogs";
     }
 
-    @GetMapping("/blogs/input") //去新增博客页面
+    @GetMapping("/blogs/input") //去新增博客页面..
     public String toAddBlog(Model model){
         model.addAttribute("blog", new Blog());  //返回一个blog对象给前端th:object
         setTypeAndTag(model);
