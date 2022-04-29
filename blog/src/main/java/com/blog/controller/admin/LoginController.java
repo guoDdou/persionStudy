@@ -24,11 +24,30 @@ public class LoginController {
         return "admin/login";
     }
 
+    //登录界面需要进行验证并给出适当的弹窗
+    /* 1、输入用户名和密码但是信息不对提示：用户名或密码错误
+    *  2、用户名和密码都不输入提示：用户名和密码为空，请重新输入
+    *  3、输入用户名但不输入密码提示：密码不能为空
+    *  4、输入密码不输入用户名提示：用户名不能为空
+    * */
     @PostMapping("/login")
     public String login(@RequestParam String username,
                         @RequestParam String password,
                         HttpSession session,
                         RedirectAttributes attributes){
+        if("".equals(username) && "".equals(password)){
+            attributes.addFlashAttribute("msg", "用户名和密码为空，请重新输入！");
+            return "redirect:/admin";
+        }
+        else  if("".equals(username) && !"".equals(password)){
+            attributes.addFlashAttribute("msg", "用户名不能为空！");
+            return "redirect:/admin";
+        }
+        else  if(!"".equals(username) && "".equals(password)){
+            attributes.addFlashAttribute("msg", "密码不能为空！");
+            return "redirect:/admin";
+        }
+        else {
         User user = userService.checkUser(username, password);
         if(user != null){
             user.setPassword(null);
@@ -39,7 +58,8 @@ public class LoginController {
             return "redirect:/admin";
         }
     }
-
+        }
+//退出当前登录
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user");

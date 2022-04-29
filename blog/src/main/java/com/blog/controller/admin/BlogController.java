@@ -42,7 +42,7 @@ public class BlogController {
         //得到分页结果对象
         PageInfo pageInfo = new PageInfo(allBlog);
         model.addAttribute("pageInfo", pageInfo);
-        setTypeAndTag(model);  //查询类型和标签
+        setTypeAndTag(model);  //查询类型和标签.
         return "admin/blogs";
     }
 
