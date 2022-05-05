@@ -45,7 +45,6 @@ public class BlogController {
         setTypeAndTag(model);  //查询类型和标签.
         return "admin/blogs";
     }
-
     @PostMapping("/blogs/search")  //按条件查询博客
     public String searchBlogs(Blog blog, @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, Model model){
         PageHelper.startPage(pagenum, 5);
@@ -92,7 +91,6 @@ public class BlogController {
         } else {
             blogService.updateBlog(blog);
         }
-
         attributes.addFlashAttribute("msg", "新增成功");
         return "redirect:/admin/blogs";
     }
